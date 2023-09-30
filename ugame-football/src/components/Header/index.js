@@ -1,20 +1,18 @@
 import React from "react";
-import { View, StyleSheet, Text, StatusBar } from "react-native";
-
-
-const statusBarHeight = StatusBar.currentHeight? StatusBar.currentHeight + 22 : 64;
+import { Image, View, Text, StatusBar } from "react-native";
+import logo from './../../assets/uGameFLogo.png';
+import {css} from './../../../assets/css/Css';
 
 export default function Header(){
     return (
-        <View style={styles.container}> 
+        <View style={css.container}>
+        <StatusBar style={'dark'} />
+        <Image
+          source={logo}
+          style={css.logo}
+        />
             <Text>uGameFootball</Text>
         </View>
     )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: "#66BB6A",
-        padding: statusBarHeight
-    }
-})

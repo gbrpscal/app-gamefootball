@@ -14,3 +14,8 @@ model Team {
   id   String @id @default(cuid())
   name String
 }
+
+model League {
+  id   String @id @default(cuid())
+  name String
+}
